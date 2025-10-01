@@ -3,6 +3,10 @@ cc_binary {
     name: "ipacm",
 
     local_include_dirs: ["src"] + ["inc"],
+    include_dirs: [
+        "external/libnetfilter_conntrack/include",
+        "external/libnfnetlink/include",
+    ],
 	header_libs: ["qti_kernel_headers"],
 
     cflags: ["-DFEATURE_IPA_ANDROID"] + ["-DFEATURE_IPACM_RESTART"] + [
