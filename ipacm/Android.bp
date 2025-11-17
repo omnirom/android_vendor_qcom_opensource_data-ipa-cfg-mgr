@@ -3,6 +3,10 @@ cc_binary {
     name: "ipacm",
 
     local_include_dirs: ["src"] + ["inc"],
+    include_dirs: [
+        "external/libnetfilter_conntrack/include",
+        "external/libnfnetlink/include",
+    ],
     header_libs: ["device_kernel_headers"]+["qti_kernel_headers",
 	"libutils_headers", "libcutils_headers"],
 
